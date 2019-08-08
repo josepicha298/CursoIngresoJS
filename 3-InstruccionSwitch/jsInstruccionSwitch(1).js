@@ -1,8 +1,8 @@
 function mostrar()
 {
 //tomo la edad  
-     var mesDelAño = document.getElementById("mes").value;
-     switch(mesDelAño)
+     var mesDelano = document.getElementById("mes").value;
+     switch(mesDelano)
         {
         case "Enero" :
         {

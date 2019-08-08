@@ -10,14 +10,16 @@ function mostrar()
            alert("Es soltero y no es menor");       
     }*/
      
-   /* if(Edad >18 && estadocivil == "Soltero")
-    {
-           alert("Es soltero y no es menor");       
-    } */
-
-    if(!(Edad <18 && estadocivil != "Soltero"))
+     if(Edad >18 && estadocivil == "Soltero")
     {
            alert("Es soltero y no es menor");       
     }
+
+    /*if(!(Edad <18 && estadocivil != "Soltero"))
+    {
+           alert("Es soltero y no es menor");       
+    }*/
+
+    
 
 }//FIN DE LA FUNCIÓN

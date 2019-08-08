@@ -5,10 +5,9 @@ function mostrar()
 	while(clave!="utn750")
 	{
         clave=prompt("error, ingrese el número clave.");
-        
-		
+     		
     }
-    console.log("clave correcta");
+    alert("clave correcta");
 
 
 }//FIN DE LA FUNCIÓN

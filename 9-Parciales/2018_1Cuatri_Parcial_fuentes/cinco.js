@@ -5,8 +5,18 @@ function mostrar()
     switch(datos)
      {
         case "tierra" :
+           alert( "acá vivimos");
+           break;
         case "mercurio" :
         case "venus" :
+           alert("acá hace más calor");
+           break;
+        case "nepturno":
+        case "pluton":
+           alert("acá hace más frio");
+           break;
+           default:
+              alert("los planetas se ingresan en minúscula");
         
      }           
 }

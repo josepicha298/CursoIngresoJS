@@ -1,8 +1,8 @@
 function mostrar()
 {
 //tomo la edad  
-var laHora = document.getElementById('hora').value;
-switch(laHora)
+    var laHora = document.getElementById('hora').value;
+    switch(laHora)
      {
         case "7" :
         case "8" :
@@ -12,6 +12,12 @@ switch(laHora)
           alert("Es de mañana.");
         break;
         }
+
+        /*if (laHora >= 7 && laHora <= 11)
+        {
+        alert("es de mañana");
+
+        }*/
 	
 	
 

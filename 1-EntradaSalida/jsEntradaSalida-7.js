@@ -20,7 +20,7 @@ function sumar()
 
 function restar()
 {
-	var primerNumero; //las variables 
+	var primerNumero;
 	var segundoNumero;
 	var resultado;
 
@@ -30,8 +30,7 @@ function restar()
 	segundoNumero=parseInt(segundoNumero);
 
 	resultado=primerNumero-segundoNumero;
-	console.log("hola "+resultado);
-	//alert("La suma es "+resultado);
+	alert("La suma es "+resultado);
 	
 }
 
@@ -41,10 +40,9 @@ function multiplicar()
 	var numerodos;
 	var multiplicar;
 
-	numerouno=document.getElementById("numeroUno").value;
-	numerouno=parseInt(numerouno);
-	numerodos=document.getElementById("numeroDos").value;
-	numerodos=parseInt(numerodos);
+	numerouno=parseInt(document.getElementById("numeroUno").value);
+	
+	numerodos=parseInt(document.getElementById("numeroDos").value);
 
 	multiplicar=numerouno*numerodos;
 	alert("La multiplicacion es "+multiplicar);

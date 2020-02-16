@@ -29,6 +29,8 @@ function Promedio ()
 	preciouno=parseInt(document.getElementById("PrecioUno").value);
 	preciodos=parseInt(document.getElementById("PrecioDos").value);
 	preciotres=parseInt(document.getElementById("PrecioTres").value);
+	promedio=(preciouno+preciodos+preciotres)/3;
+	alert(promedio);
 	
 }
 function PrecioFinal () 
@@ -37,7 +39,7 @@ function PrecioFinal ()
 	var preciodos;
 	var preciotres;
 	var suma;
-	var porcentaje;
+	var porcentaje=21;
 	var preciofinal;
 
 	preciouno=parseInt(document.getElementById("PrecioUno").value);
@@ -45,6 +47,7 @@ function PrecioFinal ()
 	preciotres=parseInt(document.getElementById("PrecioTres").value);
 	
 	suma=preciouno+preciodos+preciotres;
-	preciofinal
+	preciofinal=(suma*porcentaje/100)+suma;
+	alert(preciofinal);
 
 }

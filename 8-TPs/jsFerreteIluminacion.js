@@ -10,55 +10,160 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-	var cantidadlamparas=document.getElementById('Cantidad').value;
-	var marca=document.getElementById('Marca').value;
-	var preciodescuento;
- 	var preciolamparas=35;
- 	var descuento;
- 	var importefinal;
- 	
- 	if(cantidadlamparas>5)
- 	{
- 		descuento=cantidadlamparas*preciolamparas*50/100;
- 	}
+	var cantidaddelamparas;
+	var marca;
+	var preciobruto;
+	var descuento;
+	var preciocondecuento;
 
- 	if(cantidadlamparas==5 && marca=="ArgentinaLuz")
- 	{
- 		descuento=cantidadlamparas*preciolamparas*40/100;
- 	}
- 	else if(cantidadlamparas==5 && marca!="ArgentinaLuz")
- 	{
- 		descuento=cantidadlamparas*preciolamparas*30/100;
- 	}
+	cantidaddelamparas=document.getElementById('Cantidad').value;
+	cantidaddelamparas=parseInt(cantidaddelamparas);
+	marca=document.getElementById('Marca').value;
+	preciobruto=cantidaddelamparas*35;
+	console.info("Este es el bruto1",preciobruto);
 
- 	if((cantidadlamparas==4 && marca=="ArgentinaLuz")  || (cantidadlamparas==4 && marca=="FelipeLamparas"))
- 	{
- 		descuento=cantidadlamparas*preciolamparas*25/100;
- 	}
- 	else if((cantidadlamparas==4 && marca!="ArgentinaLuz")  || (cantidadlamparas==4 && marca!="FelipeLamparas"))
- 	{
- 		descuento=cantidadlamparas*preciolamparas*20/100;
- 	}
+	switch(cantidaddelamparas)
+	{
+		case 5:
 
- 	if(cantidadlamparas==3 && marca=="ArgentinaLuz")
- 	{
- 		descuento=cantidadlamparas*preciolamparas*15/100;
- 	}
- 	else if(cantidadlamparas==3 && marca=="FelipeLamparas")
- 	{
- 		descuento=cantidadlamparas*preciolamparas*10/100;
- 	}
- 	else if((cantidadlamparas==3 && marca!="ArgentinaLuz")  || (cantidadlamparas==3 && marca!="FelipeLamparas"))
- 	{
- 		descuento=cantidadlamparas*preciolamparas*5/100;
- 	}
- 	preciodescuento=(cantidadlamparas*preciolamparas)-descuento;
- 	document.getElementById('precioDescuento').value=preciodescuento;
+			switch(marca)
+			{
+				case"ArgentinaLuz":
 
- 	if(preciodescuento>120)
- 	{
- 		importefinal=(preciodescuento*10/100)+preciodescuento;
- 		alert(importefinal);
-  	}
+					descuento=40;
+				default:
+					descuento=30;	
+			}
+			/*if(cantidaddelamparas==5)
+		    {
+			if(marca=="ArgentinaLuz")
+			{
+				descuento=40;
+			}else
+			{
+				descuento=30;
+			}*/
+			break;
 
+		case 4:
+
+			switch(marca)
+			{
+				case"ArgentinaLuz":
+				case"FelipeLamparas":
+					descuento=40;
+					break;
+				default:
+					descuento=30;
+					break;	
+			}
+			       /*if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+						{
+							descuento=25;
+						}else
+						{
+							descuento=20;
+						}
+				       }*/
+				
+
+		case 3:
+
+			switch(marca)
+			{
+				case"ArgentinaLuz":
+					descuento=15;
+				default:
+					descuento=5;	
+			}
+			/*if(marca=="ArgentinaLuz")
+							{
+								descuento=15;
+							}
+							else
+							{
+								if(marca=="FelipeLamparas")
+									{
+										descuento=10;
+									}
+									else
+									{
+										descuento=5;
+									}
+								
+							}*/
+			break;
+
+		case 1:
+		case 2:
+			descuento=0;
+			break;
+		default:
+			descuento=50;
+			break		
+	}
+
+
+
+
+
+	descuento=0;
+
+	/*if(cantidaddelamparas>5)
+	{
+		descuento=50;
+	}
+	else
+	{
+		if(cantidaddelamparas==5)
+		{
+			if(marca=="ArgentinaLuz")
+			{
+				descuento=40;
+			}else
+			{
+				descuento=30;
+			}
+		}else
+		{
+				if(cantidaddelamparas==4)
+				{
+					   if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+						{
+							descuento=25;
+						}else
+						{
+							descuento=20;
+						}
+				       }
+				else
+				{
+					if(cantidaddelamparas==3)
+					{
+						if(marca=="ArgentinaLuz")
+							{
+								descuento=15;
+							}
+							else
+							{
+								if(marca=="FelipeLamparas")
+									{
+										descuento=10;
+									}
+									else
+									{
+										descuento=5;
+									}
+								
+							}
+
+					}
+				}
+			}
+		
+	}//if(cantidaddelamparas>5)*/
+
+	preciocondecuento=preciobruto-preciobruto*descuento/100;
+	console.info("Este es el descuento",preciocondecuento);
+	document.getElementById('precioDescuento').value=preciocondecuento;
 }

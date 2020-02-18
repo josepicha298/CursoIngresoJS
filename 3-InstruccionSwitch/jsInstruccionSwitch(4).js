@@ -4,7 +4,7 @@ function mostrar()
     var mesDelano = document.getElementById('mes').value;
 
     //alert (mesDelAño);
-    switch(mesDelano)
+    /*switch(mesDelano)
     {
     
         case "Abril" :
@@ -33,6 +33,31 @@ function mostrar()
         alert("Si tiene 28 días.");
         break;
         }
+    }*/
+
+    switch(mesDelano)
+    {
+        case "Febrero":
+        {
+            alert("Si tiene 28 días.");
+            break;
+        }
+
+        case "Abril" :
+        case "Junio" :  
+        case "Septiembre" :  
+        case "Noviembre" :
+        {
+            alert("Si tiene 30 días.");
+            break;
+        }
+
+        default:
+        {
+           alert("Si tiene 31 días.");
+           break; 
+        }
+
     }
 
    

@@ -24,6 +24,20 @@ function comenzar()
 
 function verificar()
 {
-	
+	var ingresado;
+	ingresado=document.getElementById('numero').value;
+	if(ingresado==numerosecreto)
+	{
+		alert("Sos un genio");
+	}else
+	{
+		if(numerosecreto>ingresado)
+		{
+			alert("falta");
+		}else
+		{
+			alert("Te pasaste");
+		}
+	}
 	
 }

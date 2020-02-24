@@ -2,7 +2,7 @@ function mostrar()
 {
 
 
-	var contador=0;
+	/*var contador=0;
 	var maximo;
 	var minimo;
 	var respuesta="si";
@@ -16,14 +16,14 @@ function mostrar()
 		if(contador==1)
 		{
 			maximo=numeroIngresado;
-			maximo=numeroIngresado;
+			minimo=numeroIngresado;
 		}else
 		{
 			if(numeroIngresado>maximo)
 			{
 				maximo=numeroIngresado;
 			}
-			if(numeroIngresado>minimo)
+			if(numeroIngresado<minimo)
 			{
 				minimo=numeroIngresado;
 			}
@@ -31,7 +31,9 @@ function mostrar()
 		}
 		respuesta=prompt("Ingrese no, para salir");
 	}
-	document.getElementById("")
+	document.getElementById("maximo").value=maximo;
+	document.getElementById("minimo").value=minimo;*/
+
 
 	/*var contador=0;
 	// declarar variables
@@ -67,5 +69,35 @@ function mostrar()
 			
     document.getElementById("maximo").value = maximo;
     document.getElementById("minimo").value = minimo;*/
+
+    var numero;
+    var contador=0;
+    var respuesta="si";
+    var maximo;
+    var minimo;
+
+    while(respuesta=="si")
+    {	
+    	contador++
+    	numero=parseInt(prompt("Ingrese un numeroIngresado"));
+    if(contador == 1)
+    {
+    	maximo=numero;
+    	minimo=numero;
+    }else
+    	{
+    		if(numero>maximo)
+    		{
+    			maximo=numero;
+    		}
+    		if(numero<minimo)
+    		{
+    			minimo=numero;
+    		}
+    	}
+    	respuesta=prompt("quiere ingresar otro no escriba si");
+    }	
+    document.getElementById("maximo").value=maximo;
+    document.getElementById("minimo").value=minimo;
 
 }//FIN DE LA FUNCIÓN

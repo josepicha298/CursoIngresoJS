@@ -14,8 +14,7 @@ function mostrar()
 	{
 		contador++
 		console.log("Numero: "+contador);
-	}  
+	}
 
-
-
+	
 }//FIN DE LA FUNCIÓN

@@ -11,6 +11,7 @@ function mostrar()
 	var contadorPositivo=0;
 	var contadorNegativo=0;
 	var contadorCero=0;
+	var contadorPar=0;
 
 	while(respuesta=="si")
 	{
@@ -35,6 +36,10 @@ function mostrar()
 			{
 				contadorCero++;
 			}
+		if(numero%2==0)
+		{
+			contadorPar++;
+		}	
 		
 		respuesta=prompt("Quiere ingresar otro numero escriba si");
 	}
@@ -44,6 +49,9 @@ function mostrar()
 	document.write("La cantidad de numeros positivos ingresado es: "+contadorPositivo+" <br> ");
 	document.write("La cantidad de numeros negativos ingresado es: "+contadorNegativo+" <br> ");
 	document.write("La cantidad de ceros ingresado es: "+contadorCero+" <br> ");
+	document.write("La cantidad de numeros pares ingresado es: "+contadorPar+" <br> ");
+	document.write("Promedio de los numeros positivos es: "+sumaPositivo/contadorPositivo+" <br> ");
+	document.write("Promedio de los numeros negativos es: "+sumaNegativo/contadorNegativo+" <br> ");
 
 
 }//FIN DE LA FUNCIÓN

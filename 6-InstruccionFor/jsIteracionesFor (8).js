@@ -31,30 +31,30 @@ function mostrar()
 	var formadepagomasUsada;
 
 	contadorDereserva=0;
-	nombre=prompt("Ingrese nombre");
+	//nombre=prompt("Ingrese nombre");
 	
 
 	while(respuesta=="si")
 	{
-		nombre=prompt("ingrese nombre");
-		while(!isNaN(nombre))
+		/*nombre=prompt("ingrese nombre");
+		while(!isNaN(nombre))*/
 		{
 			nombre=prompt("ingrese nombre");
 		}
 		cantidadDepersonas=parseInt(prompt("Ingrese cantidad de personas"));
-		while(isNan(cantidadDepersonas) || cantidadDepersonas<0)
+		while(isNaN(cantidadDepersonas) || cantidadDepersonas<0)
 		{
 			cantidadDepersonas=parseInt(prompt("Ingrese cantidad de personas"));
 		}
 
-		cantidadDediadeEstadia=parseInt(prompt("Ingrese cantidad de personas"));
-		while(isNan(cantidadDediadeEstadia) || cantidadDediadeEstadia<0)
+		cantidadDediadeEstadia=parseInt(prompt("Ingrese cantidad de dias"));
+		while(isNaN(cantidadDediadeEstadia) || cantidadDediadeEstadia<0)
 		{
-			cantidadDediadeEstadia=parseInt(prompt("Ingrese cantidad de personas"));
+			cantidadDediadeEstadia=parseInt(prompt("Ingrese cantidad de dias"));
 		}
 
-		formaDepago=parseInt(prompt("Ingrese cantidad de personas"));
-		while(isNan(formaDepago) || formaDepago<0)
+		formaDepago=prompt("Forma de pago");
+		while(!(isNaN(formaDepago) || formaDepago!="efectivo" && formaDepago!="tarjeta" && formaDepago!="QR"))
 		{
 			formaDepago=prompt("forma de pago");
 		}
@@ -62,7 +62,7 @@ function mostrar()
 		if(contadorDereserva==1 || maximocantidadDepersonas<cantidadDepersonas)
 		{
 			maximocantidadDepersonas=cantidadDepersonas;
-			maximocantidadDepersonas=nombre;
+			maximocantidadDehuesped=nombre;
 
 		}
 
@@ -74,28 +74,40 @@ function mostrar()
 		}
 		switch(formaDepago)
 		{
-			case"qr":
+			case"QR":
 			contadorQR=contadorQR +1;
 			break;
 
 			case"efectivo":
-			contadorfeta++;
+			contadorfete++;
 			break;
 
-			 default;
+			 default:
 			 contadorTarjeta++;
 			 break;
 		}
+		respuesta=prompt("quiere hacer otra resercva si no");
+		acumuladordedias=acumuladordedias+cantidadDediadeEstadia;
 
-	}
+	}// fin de while
+
 	promedio=acumuladordedias/contadorDereserva;
+	
 	if(contadorQR> contadorfete && contadorQR>contadorTarjeta)
 	{
-		formadepagomasUsada="tarjeta";
+		formadepagomasUsada="QR";
 	}else
 	{
-		formadepagomasUsada="efectivo";
+		if(contadorTarjeta>contadorfete)
+		{
+			formadepagomasUsada="tarjeta";	
+		}
+		else
+		{
+			formadepagomasUsada="efectivo";
+		}
 	}
+	document.write("la forma de pago mas utilizada es: "+formadepagomasUsada+"<br>"+"el promedio de cantidad de dias por reserva es: "+promedio);
 	
 	/*while(contador<cantidadDepersonas)
 	{

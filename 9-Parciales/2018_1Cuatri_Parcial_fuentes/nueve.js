@@ -1,7 +1,15 @@
 function mostrar()
 {
 
-	var formaDepago;
+	var
+
+
+
+
+
+
+
+	/*var formaDepago;
 	var formaDepagomasUsada;
 	var respuesta;
 	var contadorQR;
@@ -55,5 +63,7 @@ function mostrar()
 				}
 		}
 	document.write("forma de pago mas usado es: "+formaDepagomasUsada+"<br>"+"contador QR es: "+contadorQR+"<br>"+
-		"contador efectivo es: "+contadorefectivo+"<br>"+"contador tarjeta es: "+contadortarjeta);
+		"contador efectivo es: "+contadorefectivo+"<br>"+"contador tarjeta es: "+contadortarjeta);*/
+
+		//https://github.com/octaviovillegas/CursoIngresoJS
 }

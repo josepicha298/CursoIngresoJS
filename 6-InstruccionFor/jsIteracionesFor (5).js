@@ -11,9 +11,10 @@ function mostrar()
     }*/
 
     var contador;
-    var numeroIngreso=parseInt(prompt("Ingrese numero de repeticiones"));
+    var numeroIngreso;
 	for(contador=0;contador<10;contador++)
 	{
+		numeroIngreso=parseInt(prompt("Ingrese numero de repeticiones"));
 		console.log("Numero: "+contador);
 		if(9==numeroIngreso)
 		{

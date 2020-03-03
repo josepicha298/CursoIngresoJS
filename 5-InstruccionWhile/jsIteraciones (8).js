@@ -74,18 +74,26 @@ document.getElementById('producto').value=negativo;*/
 	while(respuesta=="si")
 	{
 		numero=parseInt(prompt("Ingrese un numero"));
-		if(numero<1)
+		while(isNaN(numero))
+		{
+			numero=parseInt(prompt("Ingrese un numero"));
+		}
+		if(numero<0)
 		{
 			negativo=negativo*numero;
-		}
-		else
-		{
-			positivo=positivo+numero;
-		}
-		contador++
+			contador++
+		}else
+			{
+				positivo=positivo+numero;
+			}
 		respuesta=prompt("Quiere ingresar otro numero")
+		respuesta=respuesta.toLowerCase()
 	}
 	document.getElementById('suma').value=positivo;
+	if(contador==0)
+	{
+		negativo=0;
+	}
 	document.getElementById("producto").value=negativo;
 
 }//FIN DE LA FUNCIÓN

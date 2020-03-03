@@ -24,9 +24,9 @@ function mostrar()
          document.write(contador,"<br/>");
     }*/
 
-    var contador=0;
-    var contadorpares=0;
-    var acumulador=0;
+    var contador;
+    var contadorpares;
+    var acumulador;
     var maximo;
     var minimo;
     var numeroIngresado;
@@ -35,9 +35,9 @@ function mostrar()
     var maximosexo;
     var maximonombre;
     //inicializaciones
-    contador
-    acumulador
-    contadorpares
+    contador=0;
+    acumulador=0;
+    contadorpares=0;
     //var bandera=0; //no es importante el valor que tiene
 
     while(contador<10)

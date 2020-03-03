@@ -79,7 +79,11 @@ function mostrar()
     while(respuesta=="si")
     {	
     	contador++
-    	numero=parseInt(prompt("Ingrese un numeroIngresado"));
+    	numero=parseInt(prompt("Ingrese un numero"));
+    	while(isNaN(numero))
+    	{
+    		numero=parseInt(prompt("Ingrese un numero"));
+    	}
     if(contador == 1)
     {
     	maximo=numero;
@@ -95,7 +99,8 @@ function mostrar()
     			minimo=numero;
     		}
     	}
-    	respuesta=prompt("quiere ingresar otro no escriba si");
+    	respuesta=prompt("quiere ingresar otro numero, escriba si");
+    	respuesta=respuesta.toLowerCase()
     }	
     document.getElementById("maximo").value=maximo;
     document.getElementById("minimo").value=minimo;

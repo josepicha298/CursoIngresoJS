@@ -70,7 +70,7 @@ function mostrar()
     document.getElementById("maximo").value = maximo;
     document.getElementById("minimo").value = minimo;*/
 
-    var numero;
+    /*var numero;
     var contador=0;
     var respuesta="si";
     var maximo;
@@ -103,6 +103,42 @@ function mostrar()
     	respuesta=respuesta.toLowerCase()
     }	
     document.getElementById("maximo").value=maximo;
-    document.getElementById("minimo").value=minimo;
+    document.getElementById("minimo").value=minimo;*/
+
+    var numero;
+    var respuesta;
+    var numeroMaximo;
+    var numeroMinimo;
+    var contador;
+
+    contador=0;
+    respuesta="si";
+
+    while(respuesta=="si")
+    {
+    	numero=prompt("Ingrese un numero");
+    	numero=parseInt(numero);
+    	while(isNaN(numero))
+    	{
+    		numero=prompt("Ingrese un numero");
+    		numero=parseInt(numero);
+    	}
+    	contador++;
+    	if(contador==1 || numeroMaximo<numero)
+    	{
+    		numeroMaximo=numero;
+    			
+    	}
+
+    	if(contador==1 || numeroMinimo>numero)
+    	{
+    		numeroMinimo=numero;
+    	}
+    	
+    	respuesta=prompt("si");
+    }//fin del while
+    document.getElementById("maximo").value=numeroMaximo;
+    document.getElementById("minimo").value=numeroMinimo;
+    
 
 }//FIN DE LA FUNCIÓN

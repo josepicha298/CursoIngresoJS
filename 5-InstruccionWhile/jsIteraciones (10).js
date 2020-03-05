@@ -1,7 +1,79 @@
 function mostrar()
 {
-/*
-	var numero;
+	var numeroIngresado;
+	var respuesta;
+	var contadorPares;
+	var negativo;
+	var positivo;
+	var cantidadPositivos;
+	var cantidadNegativos;
+	var cantidadCeros;
+	var promedioPositivo;
+	var promedioNegativo
+	var diferenciaNegativosPositivos; 
+
+	positivo=0;
+	negativo=0;
+	contadorPares=0;
+	cantidadPositivos=0;
+	cantidadNegativos=0;
+	cantidadCeros=0;
+	promedioPositivo=0;
+	promedioNegativo=0;
+
+	respuesta="si";
+
+	while(respuesta=="si")
+	{
+		numeroIngresado=prompt("Ingrese numero");
+		numeroIngresado=parseInt(numeroIngresado);
+		while(isNaN(numeroIngresado))
+		{
+			numeroIngresado=prompt("Ingrese numero");
+			numeroIngresado=parseInt(numeroIngresado);
+		}
+
+		if(numeroIngresado<0)
+		{
+			negativo=negativo-numeroIngresado;
+			cantidadNegativos++;
+		}else if(numeroIngresado>0)
+			{
+				positivo=positivo+numeroIngresado;
+				cantidadPositivos++;
+			}else
+				{
+					cantidadCeros++;
+				}
+
+		if(numeroIngresado%2==0)
+		{
+			contadorPares++;
+		}
+
+		respuesta=prompt("si");
+	}//fin del while
+
+	promedioPositivo=positivo/cantidadPositivos;
+	promedioNegativo=negativo/cantidadNegativos;
+	diferenciaNegativosPositivos=positivo+negativo;
+
+	if(numeroIngresado==0)
+	{
+		contadorPares=0;
+	}
+	document.write("La suma de los numeros positivos es: "+positivo);
+	document.write("<br> La suma de los numeros negativos es: "+negativo);
+	document.write("<br>La cantidad de numeros positivos ingresado es: "+cantidadPositivos);
+	document.write("<br>La cantidad de numeros negativos ingresado es: "+cantidadNegativos);
+	document.write("<br>La cantidad de ceros ingresado es: "+cantidadCeros);
+	document.write("<br> La cantidad de numeros pares ingresado es: "+contadorPares);
+	document.write("<br>Promedio de los numeros positivos es: "+promedioPositivo);
+	document.write("<br>Promedio de los numeros negativos es: "+promedioNegativo);
+	document.write("<br>La diferencia de numeros negativos y positivos es: "+diferenciaNegativosPositivos);
+
+
+	/*var numero;
 	var contador=0;
 	var respuesta="si";
 	var positivo;
@@ -13,7 +85,7 @@ function mostrar()
 	var contadorCero=0;
 	var contadorPar=0;
 	var promedioPositivo;
-	var promedioNegativo;
+	var promedioNegativo=0;
 	var diferenciaNegativosPositivos;
 
 	while(respuesta=="si")
@@ -42,10 +114,14 @@ function mostrar()
 		if(numero%2==0)
 		{
 			contadorPar++;
-		}// Fin de while	
+		}	
 		
+		promedioPositivo=sumaPositivo/contadorPositivo;
+		promedioNegativo=sumaNegativo/contadorNegativo;
+
 		respuesta=prompt("Quiere ingresar otro numero escriba si");
-	}
+
+	}// Fin de while
 		
 	diferenciaNegativosPositivos=sumaPositivo+sumaNegativo;
 	document.write("La suma de los numeros positivos es: "+sumaPositivo);
@@ -55,12 +131,12 @@ function mostrar()
 	document.write("La cantidad de numeros negativos ingresado es: "+contadorNegativo+" <br> ");
 	document.write("La cantidad de ceros ingresado es: "+contadorCero+" <br> ");
 	document.write("La cantidad de numeros pares ingresado es: "+contadorPar+" <br> ");
-	document.write("Promedio de los numeros positivos es: "+sumaPositivo/contadorPositivo+" <br> ");
-	document.write("Promedio de los numeros negativos es: "+sumaNegativo/contadorNegativo+" <br> "+
+	document.write("Promedio de los numeros positivos es: "+promedioPositivo+" <br> ");
+	document.write("Promedio de los numeros negativos es: "+promedioNegativo+" <br> "+
 		"La diferencia de numeros negativos y positivos es: "+diferenciaNegativosPositivos);*/
 
 
-	var contador=0;
+	/*var contador=0;
     //declarar contadores y variables 
     var acumuladorPositivos = 0;
     var acumuladorNegativos = 0;
@@ -120,7 +196,7 @@ function mostrar()
                     "El promedio de numeros negativos es de : "+promedioNegativos +"<br>"+
                     "El promedio de numeros positivos es de : "+promedioPositivos +"<br>"+
                     "La cantidad de ceros es de : "+cantidadCeros +"<br>"+
-                    "La diferencia de numeros negativos y positivos : "+diferenciaNegativosPositivos);
+                    "La diferencia de numeros negativos y positivos : "+diferenciaNegativosPositivos);*/
 
 
 }//FIN DE LA FUNCIÓN

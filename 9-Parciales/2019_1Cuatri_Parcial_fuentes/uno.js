@@ -43,6 +43,19 @@ function mostrar()
 			formaDePago=prompt("forma de pago");
 		}
 
+		//maximo de personas y maximo dias
+		if(contador==0 || maximoDePersonas<cantidadDePersonas)
+		{
+			maximoDePersonas=cantidadDePersonas;
+			maximoDePersonasNombre=nombre;
+		}
+		if(contador==0 || maximoDeDias<cantidadDeDias)
+		{
+			maximoDeDias=cantidadDeDias;
+			maximoDeDiasCantidadDePersonas=cantidadDePersonas;
+		}	
+
+		//forma de pago mas utilizado
 		switch(formaDePago)
 		{
 			case "qr":

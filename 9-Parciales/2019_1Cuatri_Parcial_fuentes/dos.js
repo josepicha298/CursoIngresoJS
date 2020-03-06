@@ -77,14 +77,7 @@ function mostrar()
 		{
 			maximoDePersonas=cantidadDePersonas;
 			maximoDePersonasNombre=nombre;
-		}/*else
-			{
-				if(maximoDePersonas<cantidadDePersonas)
-				{
-					maximoDePersonas=cantidadDePersonas;
-					maximoDePersonasNombre=nombre;
-				}
-			}*/
+		}
 		if(contador==0 || maximoDeDias<cantidadDeDias)
 		{
 			maximoDeDias=cantidadDeDias;
@@ -125,14 +118,13 @@ function mostrar()
 		}
 	promedio=acumulador/contador;
 
-	console.log("El huesped que trajo más personas en una sola reserva es: "
-	+maximoDePersonasNombre);
-	console.log("Cantidad de personas que se quedaron mas dias es: "+maximoDeDiasCantidadDePersonas);
+	console.log("El huesped que trajo más personas en una sola reserva es: "+maximoDePersonasNombre);
+	console.log("la cantidad de personas que se quedaron más días es: "+maximoDeDiasCantidadDePersonas);
 	console.log("La forma de pago más utilizada es: "+formaDePagoMasUtilizado);
 
 	document.write("<br> nombre del huesped con mas invitados: "+maximoDePersonasNombre);
-	document.write("<br> La cantidad: "+maximoDeDiasCantidadDePersonas);
-	document.write("<br> forma de pago: "+formaDePagoMasUtilizado);
-	document.write("<br> promedio: "+promedio);
+	document.write("<br>la cantidad de personas que se quedaron más días: "+maximoDeDiasCantidadDePersonas);
+	document.write("<br> la forma de pago más utilizada: "+formaDePagoMasUtilizado);
+	document.write("<br>el promedio de cantidad de días por reserva: "+promedio);
   
 }
